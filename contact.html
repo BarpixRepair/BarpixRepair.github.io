@@ -1,32 +1,218 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact</title>
-<link rel="stylesheet" href="style.css">
-<link rel="icon" href="favicon.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Devis – Barpix Repair</title>
+  <meta name="description" content="Demandez un devis gratuit pour la réparation, l'installation d'une capture card ou la customisation de votre console Nintendo. Barpix Repair répond sous 24h.">
+  <link rel="icon" href="favicon.png">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <header>
-<img src="logo.png">
-<nav>
-<a href="index.html">Accueil</a>
-<a href="presentation.html">Présentation</a>
-<a href="services.html">Services</a>
-<a href="contact.html">Contact</a>
-<a href="ressources.html">Ressources</a>
-</nav>
+  <a href="index.html" class="logo-wrap">
+    <img src="logo.png" alt="Barpix Repair logo">
+    <div class="logo-text">BARPIX REPAIR<span>Nintendo Specialist</span></div>
+  </a>
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="presentation.html">À propos</a>
+    <a href="services.html">Services</a>
+    <a href="ressources.html">Galerie</a>
+    <a href="contact.html" class="active cta">Devis gratuit</a>
+  </nav>
 </header>
 
-<div class="container">
-<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-<input type="email" name="email" placeholder="Email" required>
-<textarea name="message" placeholder="Votre demande"></textarea>
-<button type="submit">Envoyer</button>
-</form>
+<div class="page-hero">
+  <span class="section-label">// Contact</span>
+  <h1>Demander un <span style="color:var(--purple-glow)">devis</span></h1>
+  <p>Décrivez votre projet, je vous réponds sous 24h avec une estimation gratuite et sans engagement.</p>
 </div>
 
-<footer>© 2026 Barpix Repair</footer>
+<div class="divider"></div>
+
+<div class="section">
+  <div class="contact-grid">
+
+    <!-- LEFT: info -->
+    <div class="contact-info">
+      <h3>Avant d'envoyer</h3>
+      <p>Pour que je puisse vous répondre au plus vite, précisez dans votre message :</p>
+      <ul style="color:var(--text-dim); font-size:0.9rem; line-height:2; padding-left:20px; margin-bottom:24px;">
+        <li>Le modèle exact de votre console</li>
+        <li>Le service souhaité (capture card, réparation, custom…)</li>
+        <li>Une description de la panne si applicable</li>
+        <li>Votre département / localisation</li>
+      </ul>
+
+      <h3>Me contacter directement</h3>
+      <a href="https://discord.gg/VOTRE_INVITE" target="_blank" class="contact-link">
+        <span>💬</span> Serveur Discord Barpix Repair
+      </a>
+
+      <div class="service-card" style="margin-top:24px; padding:20px 24px;">
+        <p style="font-size:0.85rem; color:var(--text-dim); line-height:1.8;">
+          <strong style="color:var(--purple-glow);">⏱ Délai de réponse :</strong> sous 24h en semaine.<br>
+          <strong style="color:var(--purple-glow);">📦 Envoi postal :</strong> France entière.<br>
+          <strong style="color:var(--purple-glow);">💰 Devis :</strong> gratuit et sans engagement.
+        </p>
+      </div>
+    </div>
+
+    <!-- RIGHT: form -->
+    <div class="form-card">
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" id="contact-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="prenom">Prénom</label>
+            <input type="text" id="prenom" name="prenom" placeholder="Nicolas" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Adresse e-mail</label>
+            <input type="email" id="email" name="email" placeholder="vous@exemple.fr" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="service">Service souhaité</label>
+          <select id="service" name="service" required>
+            <option value="" disabled selected>Choisissez un service…</option>
+            <option value="capture-card">Installation Capture Card</option>
+            <option value="reparation">Réparation</option>
+            <option value="customisation">Customisation</option>
+            <option value="autre">Autre / Je ne sais pas encore</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="console">Modèle de console</label>
+          <select id="console" name="console">
+            <option value="" disabled selected>Choisissez un modèle…</option>
+            <option>Nintendo Switch (standard)</option>
+            <option>Nintendo Switch OLED</option>
+            <option>Nintendo Switch Lite</option>
+            <option>Nintendo 3DS / 2DS</option>
+            <option>Nintendo DS</option>
+            <option>Game Boy / Game Boy Advance</option>
+            <option>Autre</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Description de votre projet</label>
+          <textarea id="message" name="message" placeholder="Décrivez votre projet, la panne constatée, vos attentes…" required></textarea>
+        </div>
+
+        <!-- Honeypot anti-spam -->
+        <input type="text" name="_gotcha" style="display:none">
+        <input type="hidden" name="_subject" value="Nouveau devis – Barpix Repair">
+
+        <button type="submit" class="btn btn-primary form-submit">
+          Envoyer ma demande →
+        </button>
+
+        <p id="form-status" style="margin-top:14px; font-size:0.85rem; color:var(--accent); display:none; text-align:center;"></p>
+      </form>
+    </div>
+
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- FAQ -->
+<div class="section" style="padding-bottom:80px;">
+  <span class="section-label">// FAQ</span>
+  <h2 class="section-title">Questions fréquentes</h2>
+
+  <div style="margin-top:36px; max-width:760px;">
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Comment envoyer ma console ?</div>
+      <div class="faq-a">Après validation du devis, vous envoyez votre console par colissimo ou chronopost à l'adresse que je vous communique. Emballez-la soigneusement avec du papier bulle. Je vous préviens dès réception et vous tiens informé tout au long de l'intervention.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Combien de temps dure une installation capture card ?</div>
+      <div class="faq-a">En général entre 48h et 5 jours ouvrés selon le modèle et le carnet de commandes. Le délai exact vous est communiqué lors du devis.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">L'installation capture card annule-t-elle la garantie Nintendo ?</div>
+      <div class="faq-a">Oui, toute ouverture de la console entraîne la perte de la garantie constructeur. C'est inhérent à ce type de modification matérielle. En revanche, je garantis mon travail : si un problème est lié à mon intervention, je le prends en charge.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Quel logiciel utiliser avec la capture card ?</div>
+      <div class="faq-a">La capture card installée est compatible avec OBS Studio (gratuit), Elgato 4K Capture Utility, AverMedia RECentral et la plupart des logiciels de capture sur PC et Mac. Je fournis un guide de démarrage avec chaque installation.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Est-ce que vous réparez les consoles très anciennes (NES, SNES, N64…) ?</div>
+      <div class="faq-a">Selon la panne, oui ! Contactez-moi avec une description du problème. Je vous dirai honnêtement si c'est dans mes cordes et si la réparation vaut économiquement la peine.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Comment se passe le paiement ?</div>
+      <div class="faq-a">Le paiement s'effectue après intervention, au retour de votre console. Je n'exige pas d'acompte pour les petites réparations. Pour les projets plus conséquents, un acompte de 30% peut être demandé. Paiement par virement ou PayPal.</div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="footer-brand">BARPIX REPAIR</div>
+  <div class="footer-links">
+    <a href="index.html">Accueil</a>
+    <a href="presentation.html">À propos</a>
+    <a href="services.html">Services</a>
+    <a href="ressources.html">Galerie</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <div class="footer-copy">© 2026 Barpix Repair · barpixrepair.fr</div>
+</footer>
+
+<script>
+function toggleFaq(el) {
+  const item = el.parentElement;
+  const wasOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+  if (!wasOpen) item.classList.add('open');
+}
+
+// Formspree AJAX submit
+const form = document.getElementById('contact-form');
+const status = document.getElementById('form-status');
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const btn = form.querySelector('button[type=submit]');
+  btn.textContent = 'Envoi en cours…';
+  btn.disabled = true;
+
+  try {
+    const res = await fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    });
+    if (res.ok) {
+      status.style.display = 'block';
+      status.textContent = '✅ Message envoyé ! Je vous réponds sous 24h.';
+      form.reset();
+    } else {
+      throw new Error();
+    }
+  } catch {
+    status.style.display = 'block';
+    status.style.color = '#f87171';
+    status.textContent = '❌ Une erreur est survenue. Réessayez ou contactez-moi sur Discord.';
+  }
+  btn.textContent = 'Envoyer ma demande →';
+  btn.disabled = false;
+});
+</script>
+
 </body>
 </html>

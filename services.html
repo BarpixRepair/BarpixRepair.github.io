@@ -1,30 +1,169 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Services</title>
-<link rel="stylesheet" href="style.css">
-<link rel="icon" href="favicon.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services & Tarifs – Barpix Repair</title>
+  <meta name="description" content="Réparation Nintendo Switch dès 30€, installation de kits capture card, customisation de consoles. Devis gratuit. Barpix Repair, artisan Nintendo.">
+  <link rel="icon" href="favicon.png">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <header>
-<img src="logo.png">
-<nav>
-<a href="index.html">Accueil</a>
-<a href="presentation.html">Présentation</a>
-<a href="services.html">Services</a>
-<a href="contact.html">Contact</a>
-<a href="ressources.html">Ressources</a>
-</nav>
+  <a href="index.html" class="logo-wrap">
+    <img src="logo.png" alt="Barpix Repair logo">
+    <div class="logo-text">BARPIX REPAIR<span>Nintendo Specialist</span></div>
+  </a>
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="presentation.html">À propos</a>
+    <a href="services.html" class="active">Services</a>
+    <a href="ressources.html">Galerie</a>
+    <a href="contact.html" class="cta">Devis gratuit</a>
+  </nav>
 </header>
 
-<div class="container">
-<div class="card">Réparation dès 30€</div>
-<div class="card">Customisation</div>
-<div class="card">Capture Card</div>
+<div class="page-hero">
+  <span class="section-label">// Services & Tarifs</span>
+  <h1>Ce que je <span style="color:var(--purple-glow)">propose</span></h1>
+  <p>Réparation, installation capture card et customisation. Devis gratuit et sans engagement sur demande.</p>
 </div>
 
-<footer>© 2026 Barpix Repair</footer>
+<div class="divider"></div>
+
+<!-- CAPTURE CARD - SERVICE PRINCIPAL -->
+<div class="section">
+  <span class="section-label">// Service principal</span>
+  <h2 class="section-title">Installation Capture Card 📡</h2>
+  <p class="section-desc">La modification phare de Barpix Repair. Intégrez une carte de capture directement dans votre console pour streamer ou enregistrer vos parties.</p>
+
+  <div class="services-grid" style="margin-top:36px;">
+    <div class="service-card featured" style="grid-column: span 1;">
+      <span class="service-icon">🎮</span>
+      <h3>Nintendo Switch (standard)</h3>
+      <p>Installation d'un kit capture card interne. Compatible avec les logiciels de capture (OBS, Elgato 4K Capture Utility, etc.). Signal propre, sans latence pour le jeu.</p>
+      <span class="service-price">Sur devis</span>
+    </div>
+    <div class="service-card featured">
+      <span class="service-icon">🎮</span>
+      <h3>Nintendo Switch OLED</h3>
+      <p>Installation adaptée au modèle OLED. Travail plus minutieux compte tenu de la conception interne différente. Rendu identique et intégration propre.</p>
+      <span class="service-price">Sur devis</span>
+    </div>
+    <div class="service-card featured">
+      <span class="service-icon">🎮</span>
+      <h3>Nintendo Switch Lite</h3>
+      <p>La Switch Lite est la plus compacte : l'installation demande une grande précision. Idéal pour les streamers nomades.</p>
+      <span class="service-price">Sur devis</span>
+    </div>
+  </div>
+
+  <div class="service-card" style="margin-top:20px; padding:24px 32px;">
+    <h3 style="margin-bottom:12px;">⚙️ Comment ça fonctionne ?</h3>
+    <p style="color:var(--text-dim); font-size:0.95rem; line-height:1.8;">
+      La capture card est un composant électronique intégré à l'intérieur de la console. Elle intercepte le signal vidéo avant qu'il ne soit affiché à l'écran, et le transmet via USB à votre PC. Vous pouvez ainsi streamer sur Twitch, YouTube, enregistrer vos sessions, ou créer du contenu sans boitier externe.
+    </p>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- REPARATION -->
+<div class="section">
+  <span class="section-label">// Réparation</span>
+  <h2 class="section-title">Réparation Nintendo 🔧</h2>
+  <p class="section-desc">Pannes courantes, diagnostiques et remplacements de composants. Chaque réparation commence par un diagnostique gratuit.</p>
+
+  <div class="services-grid" style="margin-top:36px;">
+    <div class="service-card">
+      <span class="service-icon">🕹️</span>
+      <h3>Joy-Con Drift</h3>
+      <p>Remplacement du joystick analogique ou nettoyage approfondi. Le problème le plus courant sur les Joy-Con Nintendo Switch.</p>
+      <span class="service-price">Dès 30€</span>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🖥️</span>
+      <h3>Écran cassé / LCD</h3>
+      <p>Remplacement de l'écran sur Switch, Switch Lite, Switch OLED. Pièces de qualité.</p>
+      <span class="service-price">Sur devis</span>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🔌</span>
+      <h3>Connecteur de charge</h3>
+      <p>Remplacement du port USB-C en cas de charge intermittente ou de connecteur endommagé.</p>
+      <span class="service-price">Dès 30€</span>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">💾</span>
+      <h3>Lecteur de cartes</h3>
+      <p>Nettoyage ou remplacement du lecteur de cartes SD / Game Card défectueux.</p>
+      <span class="service-price">Sur devis</span>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🔊</span>
+      <h3>Haut-parleurs / son</h3>
+      <p>Remplacement des haut-parleurs grillés ou défectueux. Fonctionne sur tous les modèles Switch.</p>
+      <span class="service-price">Sur devis</span>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🔋</span>
+      <h3>Batterie</h3>
+      <p>Remplacement de la batterie en cas d'autonomie très réduite ou de gonflement.</p>
+      <span class="service-price">Sur devis</span>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- CUSTOMISATION -->
+<div class="section">
+  <span class="section-label">// Customisation</span>
+  <h2 class="section-title">Customisation 🎨</h2>
+  <p class="section-desc">Rendez votre console unique. Coque, boutons, peinture, décals — tout est possible.</p>
+
+  <div class="services-grid" style="margin-top:36px;">
+    <div class="service-card">
+      <span class="service-icon">🎭</span>
+      <h3>Remplacement de coque</h3>
+      <p>Large choix de coques de remplacement : transparentes, colorées, thématiques. Montage propre et soigné.</p>
+      <span class="service-price">Sur devis</span>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🖌️</span>
+      <h3>Boutons personnalisés</h3>
+      <p>Remplacement des boutons ABXY, croix directionnelle, gâchettes par des pièces colorées ou personnalisées.</p>
+      <span class="service-price">Sur devis</span>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">✨</span>
+      <h3>Décals & vinyle</h3>
+      <p>Application de décals vinyle haute qualité pour personnaliser l'apparence de votre console sans modification permanente.</p>
+      <span class="service-price">Sur devis</span>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<div class="section" style="text-align:center; padding-bottom:80px;">
+  <h2 class="section-title">Un projet en tête ?</h2>
+  <p class="section-desc" style="margin:16px auto 32px;">Tous les tarifs sont établis sur devis selon l'état de votre console et la complexité de l'intervention. Contactez-moi pour obtenir une estimation gratuite.</p>
+  <a href="contact.html" class="btn btn-primary">Demander un devis gratuit →</a>
+</div>
+
+<footer>
+  <div class="footer-brand">BARPIX REPAIR</div>
+  <div class="footer-links">
+    <a href="index.html">Accueil</a>
+    <a href="presentation.html">À propos</a>
+    <a href="services.html">Services</a>
+    <a href="ressources.html">Galerie</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <div class="footer-copy">© 2026 Barpix Repair · barpixrepair.fr</div>
+</footer>
+
 </body>
 </html>
