@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contatti & Preventivo – Barpix Repair</title>
+  <meta name="description" content="Richiedi un preventivo gratuito per la riparazione, l'installazione di una capture card o la personalizzazione della tua console Nintendo. Risposta entro 24h.">
+  <link rel="icon" href="../assets/favicon.png">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header>
+  <a href="index.html" class="logo-wrap">
+    <img src="../assets/logo.png" alt="Barpix Repair logo">
+    <div class="logo-text">BARPIX REPAIR<span>Nintendo Specialist</span></div>
+  </a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="presentation.html">Chi sono</a>
+    <a href="services.html">Servizi</a>
+    <a href="ressources.html">Galleria</a>
+    <a href="contact.html" class="active cta">Preventivo gratuito</a>
+    <select class="lang-select" aria-label="Language" onchange="if(this.value)location.href=this.value;"><option value="../contact.html">FR</option><option value="../en/contact.html">EN</option><option value="../de/contact.html">DE</option><option value="contact.html" selected>IT</option><option value="../es/contact.html">ES</option></select>
+  </nav>
+</header>
+<div class="page-hero">
+  <span class="section-label">// Contatti</span>
+  <h1>Richiedi un <span style="color:var(--purple-glow)">preventivo</span></h1>
+  <p>Descrivi il tuo progetto, ti rispondo entro 24h con una stima gratuita e senza impegno.</p>
+</div>
+
+<div class="divider"></div>
+
+<div class="section">
+  <div class="contact-grid">
+
+    <div class="contact-info">
+      <h3>Prima di inviare</h3>
+      <p>Per poterti rispondere il più velocemente possibile, indica nel messaggio:</p>
+      <ul style="color:var(--text-dim); font-size:0.9rem; line-height:2; padding-left:20px; margin-bottom:24px;">
+        <li>Il modello esatto della tua console</li>
+        <li>Il servizio desiderato (capture card, riparazione, custom…)</li>
+        <li>Una descrizione del guasto, se presente</li>
+        <li>La tua zona / località</li>
+      </ul>
+
+      <h3>Contattami direttamente</h3>
+      <a href="https://discord.gg/VOTRE_INVITE" target="_blank" class="contact-link">
+        <span>💬</span> Server Discord Barpix Repair
+      </a>
+
+      <div class="service-card" style="margin-top:24px; padding:20px 24px;">
+        <p style="font-size:0.85rem; color:var(--text-dim); line-height:1.8;">
+          <strong style="color:var(--purple-glow);">⏱ Tempi di risposta:</strong> entro 24h nei giorni feriali.<br>
+          <strong style="color:var(--purple-glow);">📦 Spedizione postale:</strong> tutta la Francia.<br>
+          <strong style="color:var(--purple-glow);">💰 Preventivo:</strong> gratuito e senza impegno.
+        </p>
+      </div>
+    </div>
+
+    <div class="form-card">
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" id="contact-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="prenom">Nome</label>
+            <input type="text" id="prenom" name="prenom" placeholder="Nicolas" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Indirizzo e-mail</label>
+            <input type="email" id="email" name="email" placeholder="tu@esempio.it" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="service">Servizio desiderato</label>
+          <select id="service" name="service" required>
+            <option value="" disabled selected>Scegli un servizio…</option>
+            <option value="Installazione Capture Card">Installazione Capture Card</option>
+            <option value="Riparazione">Riparazione</option>
+            <option value="Personalizzazione">Personalizzazione</option>
+            <option value="Altro / Non so ancora">Altro / Non so ancora</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="console">Modello di console</label>
+          <select id="console" name="console">
+            <option value="" disabled selected>Scegli un modello…</option>
+            <option>New 3DS XL</option>
+            <option>Nintendo 3DS / 2DS</option>
+            <option>Nintendo DS</option>
+            <option>Game Boy / Game Boy Advance</option>
+            <option>Nintendo Switch</option>
+            <option>Altro</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Descrizione del progetto</label>
+          <textarea id="message" name="message" placeholder="Descrivi il tuo progetto, il guasto, le tue aspettative…" required></textarea>
+        </div>
+
+        <input type="text" name="_gotcha" style="display:none">
+        <input type="hidden" name="_subject" value="Nuovo preventivo – Barpix Repair">
+
+        <button type="submit" class="btn btn-primary form-submit">
+          Invia la richiesta →
+        </button>
+
+        <p id="form-status" style="margin-top:14px; font-size:0.85rem; color:var(--accent); display:none; text-align:center;"></p>
+      </form>
+    </div>
+
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<div class="section" style="padding-bottom:80px;">
+  <span class="section-label">// FAQ</span>
+  <h2 class="section-title">Domande frequenti</h2>
+
+  <div style="margin-top:36px; max-width:760px;">
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Come spedisco la mia console?</div>
+      <div class="faq-a">Dopo l'approvazione del preventivo, spedisci la console con corriere tracciato all'indirizzo che ti comunico. Imballala con cura con pluriball. Ti avviso appena la ricevo e ti tengo aggiornato per tutta la durata dell'intervento.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Quanto dura un'installazione capture card?</div>
+      <div class="faq-a">In genere tra 48h e 5 giorni lavorativi a seconda del modello e del carico di lavoro. I tempi esatti vengono comunicati con il preventivo.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">L'installazione capture card annulla la garanzia?</div>
+      <div class="faq-a">Sì, qualsiasi apertura della console comporta la perdita della garanzia del produttore. È inerente a questo tipo di modifica hardware. In compenso, garantisco il mio lavoro: se un problema è legato al mio intervento, me ne occupo.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Quale software usare con la capture card?</div>
+      <div class="faq-a">La capture card installata è compatibile con OBS Studio (gratuito), Elgato 4K Capture Utility, AverMedia RECentral e la maggior parte dei software di cattura su PC e Mac. Fornisco una guida introduttiva con ogni installazione.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Riparate console molto vecchie?</div>
+      <div class="faq-a">A seconda del guasto, sì! Contattami con una descrizione del problema. Ti dirò onestamente se è alla mia portata e se la riparazione conviene.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Come funziona il pagamento?</div>
+      <div class="faq-a">Il pagamento avviene dopo l'intervento, alla restituzione della console. Non richiedo acconto per le piccole riparazioni. Per progetti più impegnativi può essere richiesto un acconto del 30%. Pagamento tramite bonifico o PayPal.</div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="footer-brand">BARPIX REPAIR</div>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="presentation.html">Chi sono</a>
+    <a href="services.html">Servizi</a>
+    <a href="ressources.html">Galleria</a>
+    <a href="contact.html">Contatti</a>
+  </div>
+  <div class="footer-copy">© 2026 Barpix Repair · barpixrepair.fr</div>
+</footer>
+
+</body>
+</html>
+<script>
+function toggleFaq(el) {
+  const item = el.parentElement;
+  const wasOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+  if (!wasOpen) item.classList.add('open');
+}
+
+const form = document.getElementById('contact-form');
+const status = document.getElementById('form-status');
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const btn = form.querySelector('button[type=submit]');
+  const original = btn.textContent;
+  btn.textContent = 'Invio in corso…';
+  btn.disabled = true;
+
+  try {
+    const res = await fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    });
+    if (res.ok) {
+      status.style.display = 'block';
+      status.style.color = 'var(--accent)';
+      status.textContent = '✅ Messaggio inviato! Ti rispondo entro 24h.';
+      form.reset();
+    } else { throw new Error(); }
+  } catch {
+    status.style.display = 'block';
+    status.style.color = '#f87171';
+    status.textContent = '❌ Si è verificato un errore. Riprova o contattami su Discord.';
+  }
+  btn.textContent = original;
+  btn.disabled = false;
+});
+</script>

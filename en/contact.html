@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Quote – Barpix Repair</title>
+  <meta name="description" content="Request a free quote for the repair, capture card installation or customisation of your Nintendo console. Reply within 24h.">
+  <link rel="icon" href="../assets/favicon.png">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header>
+  <a href="index.html" class="logo-wrap">
+    <img src="../assets/logo.png" alt="Barpix Repair logo">
+    <div class="logo-text">BARPIX REPAIR<span>Nintendo Specialist</span></div>
+  </a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="presentation.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="ressources.html">Gallery</a>
+    <a href="contact.html" class="active cta">Free quote</a>
+    <select class="lang-select" aria-label="Language" onchange="if(this.value)location.href=this.value;"><option value="../contact.html">FR</option><option value="contact.html" selected>EN</option><option value="../de/contact.html">DE</option><option value="../it/contact.html">IT</option><option value="../es/contact.html">ES</option></select>
+  </nav>
+</header>
+<div class="page-hero">
+  <span class="section-label">// Contact</span>
+  <h1>Request a <span style="color:var(--purple-glow)">quote</span></h1>
+  <p>Describe your project and I'll reply within 24h with a free, no-obligation estimate.</p>
+</div>
+
+<div class="divider"></div>
+
+<div class="section">
+  <div class="contact-grid">
+
+    <div class="contact-info">
+      <h3>Before you send</h3>
+      <p>So I can reply as fast as possible, please include in your message:</p>
+      <ul style="color:var(--text-dim); font-size:0.9rem; line-height:2; padding-left:20px; margin-bottom:24px;">
+        <li>The exact model of your console</li>
+        <li>The service you want (capture card, repair, custom…)</li>
+        <li>A description of the fault if relevant</li>
+        <li>Your area / location</li>
+      </ul>
+
+      <h3>Contact me directly</h3>
+      <a href="https://discord.gg/VOTRE_INVITE" target="_blank" class="contact-link">
+        <span>💬</span> Barpix Repair Discord server
+      </a>
+
+      <div class="service-card" style="margin-top:24px; padding:20px 24px;">
+        <p style="font-size:0.85rem; color:var(--text-dim); line-height:1.8;">
+          <strong style="color:var(--purple-glow);">⏱ Response time:</strong> within 24h on weekdays.<br>
+          <strong style="color:var(--purple-glow);">📦 Postal shipping:</strong> all of France.<br>
+          <strong style="color:var(--purple-glow);">💰 Quote:</strong> free and no obligation.
+        </p>
+      </div>
+    </div>
+
+    <div class="form-card">
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" id="contact-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="prenom">First name</label>
+            <input type="text" id="prenom" name="prenom" placeholder="Nicolas" required>
+          </div>
+          <div class="form-group">
+            <label for="email">E-mail address</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="service">Desired service</label>
+          <select id="service" name="service" required>
+            <option value="" disabled selected>Choose a service…</option>
+            <option value="Capture Card Installation">Capture Card Installation</option>
+            <option value="Repair">Repair</option>
+            <option value="Customisation">Customisation</option>
+            <option value="Other / Not sure yet">Other / Not sure yet</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="console">Console model</label>
+          <select id="console" name="console">
+            <option value="" disabled selected>Choose a model…</option>
+            <option>New 3DS XL</option>
+            <option>Nintendo 3DS / 2DS</option>
+            <option>Nintendo DS</option>
+            <option>Game Boy / Game Boy Advance</option>
+            <option>Nintendo Switch</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Project description</label>
+          <textarea id="message" name="message" placeholder="Describe your project, the fault, your expectations…" required></textarea>
+        </div>
+
+        <input type="text" name="_gotcha" style="display:none">
+        <input type="hidden" name="_subject" value="New quote – Barpix Repair">
+
+        <button type="submit" class="btn btn-primary form-submit">
+          Send my request →
+        </button>
+
+        <p id="form-status" style="margin-top:14px; font-size:0.85rem; color:var(--accent); display:none; text-align:center;"></p>
+      </form>
+    </div>
+
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<div class="section" style="padding-bottom:80px;">
+  <span class="section-label">// FAQ</span>
+  <h2 class="section-title">Frequently asked questions</h2>
+
+  <div style="margin-top:36px; max-width:760px;">
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">How do I send my console?</div>
+      <div class="faq-a">Once the quote is approved, you send your console by tracked post to the address I give you. Pack it carefully with bubble wrap. I let you know as soon as it arrives and keep you updated throughout the work.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">How long does a capture card install take?</div>
+      <div class="faq-a">Usually between 48h and 5 working days depending on the model and the workload. The exact lead time is given with the quote.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Does the capture card install void the warranty?</div>
+      <div class="faq-a">Yes, opening the console voids the manufacturer's warranty. That's inherent to this kind of hardware mod. However, I guarantee my work: if an issue is linked to my intervention, I take care of it.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Which software works with the capture card?</div>
+      <div class="faq-a">The installed capture card works with OBS Studio (free), Elgato 4K Capture Utility, AverMedia RECentral and most capture software on PC and Mac. I provide a getting-started guide with every install.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Do you repair very old consoles?</div>
+      <div class="faq-a">Depending on the fault, yes! Contact me with a description of the problem. I'll tell you honestly whether it's within my reach and whether the repair is worth it.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">How does payment work?</div>
+      <div class="faq-a">Payment is made after the work, when your console is returned. I don't require a deposit for small repairs. For bigger projects a 30% deposit may be requested. Payment by bank transfer or PayPal.</div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="footer-brand">BARPIX REPAIR</div>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="presentation.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="ressources.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <div class="footer-copy">© 2026 Barpix Repair · barpixrepair.fr</div>
+</footer>
+
+</body>
+</html>
+<script>
+function toggleFaq(el) {
+  const item = el.parentElement;
+  const wasOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+  if (!wasOpen) item.classList.add('open');
+}
+
+const form = document.getElementById('contact-form');
+const status = document.getElementById('form-status');
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const btn = form.querySelector('button[type=submit]');
+  const original = btn.textContent;
+  btn.textContent = 'Sending…';
+  btn.disabled = true;
+
+  try {
+    const res = await fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    });
+    if (res.ok) {
+      status.style.display = 'block';
+      status.style.color = 'var(--accent)';
+      status.textContent = '✅ Message sent! I'll reply within 24h.';
+      form.reset();
+    } else { throw new Error(); }
+  } catch {
+    status.style.display = 'block';
+    status.style.color = '#f87171';
+    status.textContent = '❌ Something went wrong. Try again or contact me on Discord.';
+  }
+  btn.textContent = original;
+  btn.disabled = false;
+});
+</script>

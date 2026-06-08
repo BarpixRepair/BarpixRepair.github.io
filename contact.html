@@ -4,15 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact & Devis – Barpix Repair</title>
-  <meta name="description" content="Demandez un devis gratuit pour la réparation, l'installation d'une capture card ou la customisation de votre console Nintendo. Barpix Repair répond sous 24h.">
-  <link rel="icon" href="favicon.png">
+  <meta name="description" content="Demandez un devis gratuit pour la réparation, l'installation d'une capture card ou la customisation de votre console Nintendo. Réponse sous 24h.">
+  <link rel="icon" href="assets/favicon.png">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <header>
   <a href="index.html" class="logo-wrap">
-    <img src="logo.png" alt="Barpix Repair logo">
+    <img src="assets/logo.png" alt="Barpix Repair logo">
     <div class="logo-text">BARPIX REPAIR<span>Nintendo Specialist</span></div>
   </a>
   <nav>
@@ -21,9 +20,9 @@
     <a href="services.html">Services</a>
     <a href="ressources.html">Galerie</a>
     <a href="contact.html" class="active cta">Devis gratuit</a>
+    <select class="lang-select" aria-label="Language" onchange="if(this.value)location.href=this.value;"><option value="contact.html" selected>FR</option><option value="en/contact.html">EN</option><option value="de/contact.html">DE</option><option value="it/contact.html">IT</option><option value="es/contact.html">ES</option></select>
   </nav>
 </header>
-
 <div class="page-hero">
   <span class="section-label">// Contact</span>
   <h1>Demander un <span style="color:var(--purple-glow)">devis</span></h1>
@@ -35,7 +34,6 @@
 <div class="section">
   <div class="contact-grid">
 
-    <!-- LEFT: info -->
     <div class="contact-info">
       <h3>Avant d'envoyer</h3>
       <p>Pour que je puisse vous répondre au plus vite, précisez dans votre message :</p>
@@ -60,7 +58,6 @@
       </div>
     </div>
 
-    <!-- RIGHT: form -->
     <div class="form-card">
       <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" id="contact-form">
         <div class="form-row">
@@ -78,10 +75,10 @@
           <label for="service">Service souhaité</label>
           <select id="service" name="service" required>
             <option value="" disabled selected>Choisissez un service…</option>
-            <option value="capture-card">Installation Capture Card</option>
-            <option value="reparation">Réparation</option>
-            <option value="customisation">Customisation</option>
-            <option value="autre">Autre / Je ne sais pas encore</option>
+            <option value="Installation Capture Card">Installation Capture Card</option>
+            <option value="Réparation">Réparation</option>
+            <option value="Customisation">Customisation</option>
+            <option value="Autre / Je ne sais pas encore">Autre / Je ne sais pas encore</option>
           </select>
         </div>
 
@@ -89,12 +86,11 @@
           <label for="console">Modèle de console</label>
           <select id="console" name="console">
             <option value="" disabled selected>Choisissez un modèle…</option>
-            <option>Nintendo Switch (standard)</option>
-            <option>Nintendo Switch OLED</option>
-            <option>Nintendo Switch Lite</option>
+            <option>New 3DS XL</option>
             <option>Nintendo 3DS / 2DS</option>
             <option>Nintendo DS</option>
             <option>Game Boy / Game Boy Advance</option>
+            <option>Nintendo Switch</option>
             <option>Autre</option>
           </select>
         </div>
@@ -104,7 +100,6 @@
           <textarea id="message" name="message" placeholder="Décrivez votre projet, la panne constatée, vos attentes…" required></textarea>
         </div>
 
-        <!-- Honeypot anti-spam -->
         <input type="text" name="_gotcha" style="display:none">
         <input type="hidden" name="_subject" value="Nouveau devis – Barpix Repair">
 
@@ -121,7 +116,6 @@
 
 <div class="divider"></div>
 
-<!-- FAQ -->
 <div class="section" style="padding-bottom:80px;">
   <span class="section-label">// FAQ</span>
   <h2 class="section-title">Questions fréquentes</h2>
@@ -139,7 +133,7 @@
     </div>
 
     <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">L'installation capture card annule-t-elle la garantie Nintendo ?</div>
+      <div class="faq-q" onclick="toggleFaq(this)">L'installation capture card annule-t-elle la garantie ?</div>
       <div class="faq-a">Oui, toute ouverture de la console entraîne la perte de la garantie constructeur. C'est inhérent à ce type de modification matérielle. En revanche, je garantis mon travail : si un problème est lié à mon intervention, je le prends en charge.</div>
     </div>
 
@@ -149,7 +143,7 @@
     </div>
 
     <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">Est-ce que vous réparez les consoles très anciennes (NES, SNES, N64…) ?</div>
+      <div class="faq-q" onclick="toggleFaq(this)">Réparez-vous les consoles très anciennes ?</div>
       <div class="faq-a">Selon la panne, oui ! Contactez-moi avec une description du problème. Je vous dirai honnêtement si c'est dans mes cordes et si la réparation vaut économiquement la peine.</div>
     </div>
 
@@ -173,6 +167,8 @@
   <div class="footer-copy">© 2026 Barpix Repair · barpixrepair.fr</div>
 </footer>
 
+</body>
+</html>
 <script>
 function toggleFaq(el) {
   const item = el.parentElement;
@@ -181,13 +177,13 @@ function toggleFaq(el) {
   if (!wasOpen) item.classList.add('open');
 }
 
-// Formspree AJAX submit
 const form = document.getElementById('contact-form');
 const status = document.getElementById('form-status');
 
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
   const btn = form.querySelector('button[type=submit]');
+  const original = btn.textContent;
   btn.textContent = 'Envoi en cours…';
   btn.disabled = true;
 
@@ -199,20 +195,16 @@ form.addEventListener('submit', async (e) => {
     });
     if (res.ok) {
       status.style.display = 'block';
+      status.style.color = 'var(--accent)';
       status.textContent = '✅ Message envoyé ! Je vous réponds sous 24h.';
       form.reset();
-    } else {
-      throw new Error();
-    }
+    } else { throw new Error(); }
   } catch {
     status.style.display = 'block';
     status.style.color = '#f87171';
     status.textContent = '❌ Une erreur est survenue. Réessayez ou contactez-moi sur Discord.';
   }
-  btn.textContent = 'Envoyer ma demande →';
+  btn.textContent = original;
   btn.disabled = false;
 });
 </script>
-
-</body>
-</html>
