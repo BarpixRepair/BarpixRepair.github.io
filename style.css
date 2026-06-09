@@ -761,25 +761,33 @@ footer {
    BARPIX — additions for logo, flag badge, REC title, lang switch
    ============================================================ */
 
-/* Logo image (Barpix mascot sits on a light background → round it
-   into a tidy tile so it reads cleanly against the dark header) */
+/* Logo image — rounded tile with a violet contour matching the
+   "Barpix Repair" wordmark (instead of the previous light edge) */
 .logo-wrap img {
   border-radius: 10px;
-  background: #bfe8f5;
-  padding: 2px;
+  background: transparent;
+  padding: 0;
+  border: 2px solid var(--purple-glow);
+  box-shadow: 0 0 12px rgba(192, 132, 252, 0.45);
 }
 
-/* Small French-flag (DS trio) thumbnail inside the hero badge */
-.hero-badge.has-flag {
-  padding-top: 5px;
-  padding-bottom: 5px;
+/* "Entreprise française" badge — now sits below the CTA buttons,
+   centered, with the FR flag emoji after the text */
+.hero .hero-badge.has-flag {
+  margin-top: 34px;
+  margin-bottom: 0;
 }
-.badge-flag {
-  height: 18px;
-  width: auto;
-  border-radius: 4px;
-  display: inline-block;
-  box-shadow: 0 0 8px rgba(6, 182, 212, 0.35);
+.badge-flag-emoji {
+  font-size: 1.05em;
+  line-height: 1;
+}
+
+/* Modding section: force a 2 x 2 square grid for the 4 cards */
+.services-grid.grid-2col {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+@media (max-width: 680px) {
+  .services-grid.grid-2col { grid-template-columns: 1fr; }
 }
 
 /* REC logo inline in the "Installation Capture Card" section title */
