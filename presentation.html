@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+  <!-- Secure Privacy consent banner -->
+  <script src="https://app.secureprivacy.ai/script/6a297d1eda6662683496cce2.js"></script>
+  <!-- End Secure Privacy -->
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NT96SX6G');</script>
+  <!-- End Google Tag Manager -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>À propos – Barpix Repair</title>
@@ -9,6 +19,10 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NT96SX6G"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
 <header>
   <a href="index.html" class="logo-wrap">
     <img src="assets/logo.png" alt="Barpix Repair logo">
@@ -20,7 +34,7 @@
     <a href="services.html">Services</a>
     <a href="ressources.html">Galerie</a>
     <a href="contact.html" class="cta">Devis gratuit</a>
-    <select class="lang-select" aria-label="Language" onchange="if(this.value)location.href=this.value;"><option value="presentation.html" selected>🇫🇷 FR</option><option value="en/presentation.html">🇬🇧 EN</option><option value="de/presentation.html">🇩🇪 DE</option><option value="it/presentation.html">🇮🇹 IT</option><option value="es/presentation.html">🇪🇸 ES</option></select>
+    <div class="lang-dd" aria-label="Language"><button type="button" class="lang-dd-btn" aria-haspopup="listbox" aria-expanded="false"><span class="lang-dd-code">FR</span><span class="lang-dd-flag">🇫🇷</span><span class="lang-dd-caret" aria-hidden="true"></span></button><ul class="lang-dd-list" role="listbox"><li role="option"><a class="lang-dd-opt is-current" href="presentation.html"><span class="lang-dd-code">FR</span><span class="lang-dd-flag">🇫🇷</span></a></li><li role="option"><a class="lang-dd-opt" href="en/presentation.html"><span class="lang-dd-code">EN</span><span class="lang-dd-flag">🇬🇧</span></a></li><li role="option"><a class="lang-dd-opt" href="de/presentation.html"><span class="lang-dd-code">DE</span><span class="lang-dd-flag">🇩🇪</span></a></li><li role="option"><a class="lang-dd-opt" href="it/presentation.html"><span class="lang-dd-code">IT</span><span class="lang-dd-flag">🇮🇹</span></a></li><li role="option"><a class="lang-dd-opt" href="es/presentation.html"><span class="lang-dd-code">ES</span><span class="lang-dd-flag">🇪🇸</span></a></li></ul></div>
   </nav>
 </header>
 <div class="page-hero">
@@ -105,5 +119,20 @@
   <div class="footer-copy">© 2026 Barpix Repair · barpixrepair.fr</div>
 </footer>
 
+<script>
+(function() {
+  var dd = document.querySelector('.lang-dd');
+  if (!dd) return;
+  var btn = dd.querySelector('.lang-dd-btn');
+  function close() { dd.classList.remove('open'); btn.setAttribute('aria-expanded','false'); }
+  btn.addEventListener('click', function(e) {
+    e.stopPropagation();
+    var open = dd.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  document.addEventListener('click', function(e) { if (!dd.contains(e.target)) close(); });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') close(); });
+})();
+</script>
 </body>
 </html>
