@@ -887,14 +887,7 @@ footer {
 .about-photo {
   display: block;
   width: 100%;
-  max-width: 380px;
-  max-height: 560px;
-  margin: 0 auto;
+  height: 100%;
   object-fit: cover;
-  border-radius: 20px;
-  border: 1px solid var(--border-bright);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 30px rgba(124, 58, 237, 0.25);
-}
-@media (max-width: 760px) {
-  .about-photo { max-width: 320px; }
+  object-position: center 22%;
 }
