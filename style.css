@@ -883,20 +883,59 @@ footer {
   .lang-dd-list { right: auto; left: 0; }
 }
 
-/* About page — founder photo beside the presentation text */
-.about-visual {
-  display: flex;
-  justify-content: center;
+/* About page — founder photo beside the presentation text.
+   The photo column stretches to the text height; the image is absolutely
+   placed so it matches that height exactly while staying fully visible. */
+.about-grid.about-grid-photo {
+  align-items: stretch;
+}
+.about-grid.about-grid-photo .about-visual {
+  position: relative;
+  display: block;
+  min-height: 320px;
 }
 .about-photo {
-  display: block;
-  width: 100%;
-  max-width: 300px;
-  height: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
   border-radius: 18px;
   border: 1px solid var(--border-bright);
   box-shadow: 0 18px 45px rgba(0, 0, 0, 0.5), 0 0 26px rgba(124, 58, 237, 0.22);
 }
-@media (max-width: 760px) {
-  .about-photo { max-width: 240px; }
+@media (max-width: 768px) {
+  /* single-column layout: revert to natural flow, capped width */
+  .about-grid.about-grid-photo .about-visual { min-height: 0; }
+  .about-photo {
+    position: static;
+    transform: none;
+    height: auto;
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+/* Services — capture-card cards: product photo above title,
+   controller emoji moved inline after the title (card size unchanged) */
+.cc-photo {
+  display: block;
+  max-height: 92px;
+  max-width: 100%;
+  width: auto;
+  margin: 0 0 16px;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.45));
+}
+.service-card h3 .cc-pad {
+  font-size: 0.9em;
+  margin-left: 6px;
+  vertical-align: middle;
+  opacity: 0.85;
 }
