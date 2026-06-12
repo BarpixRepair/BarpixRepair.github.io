@@ -53,12 +53,15 @@
       <p>So I can reply as fast as possible, please include in your message:</p>
       <ul style="color:var(--text-dim); font-size:0.9rem; line-height:2; padding-left:20px; margin-bottom:24px;">
         <li>The exact model of your console</li>
-        <li>The service you want (capture card, repair, custom…)</li>
+        <li>The service you want (repair, modding, capture card)</li>
         <li>A description of the fault if relevant</li>
-        <li>Your area / location</li>
+        <li>Your department (FR) / country</li>
       </ul>
 
       <h3>Contact me directly</h3>
+      <a href="mailto:barpixrepair@gmail.com" class="contact-link">
+        <span>✉️</span> barpixrepair@gmail.com
+      </a>
       <a href="https://discord.gg/faUDPVxeK5" target="_blank" class="contact-link">
         <span>💬</span> Barpix Repair Discord server
       </a>
@@ -66,7 +69,7 @@
       <div class="service-card" style="margin-top:24px; padding:20px 24px;">
         <p style="font-size:0.85rem; color:var(--text-dim); line-height:1.8;">
           <strong style="color:var(--purple-glow);">⏱ Response time:</strong> within 24h on weekdays.<br>
-          <strong style="color:var(--purple-glow);">📦 Postal shipping:</strong> all of France.<br>
+          <strong style="color:var(--purple-glow);">📦 Shipping:</strong> France and Europe.<br>
           <strong style="color:var(--purple-glow);">💰 Quote:</strong> free and no obligation.
         </p>
       </div>
@@ -77,11 +80,11 @@
         <div class="form-row">
           <div class="form-group">
             <label for="prenom">First name</label>
-            <input type="text" id="prenom" name="prenom" placeholder="Nicolas" required>
+            <input type="text" id="prenom" name="prenom" placeholder="" required>
           </div>
           <div class="form-group">
             <label for="email">E-mail address</label>
-            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+            <input type="email" id="email" name="email" placeholder="" required>
           </div>
         </div>
 
@@ -89,10 +92,10 @@
           <label for="service">Desired service</label>
           <select id="service" name="service" required>
             <option value="" disabled selected>Choose a service…</option>
-            <option value="Capture Card Installation">Capture Card Installation</option>
             <option value="Repair">Repair</option>
-            <option value="Customisation">Customisation</option>
-            <option value="Other / Not sure yet">Other / Not sure yet</option>
+            <option value="Modding">Modding</option>
+            <option value="Capture Card">Capture Card</option>
+            <option value="Other">Other</option>
           </select>
         </div>
 
@@ -100,12 +103,14 @@
           <label for="console">Console model</label>
           <select id="console" name="console">
             <option value="" disabled selected>Choose a model…</option>
+            <option>New 2DS XL</option>
             <option>New 3DS XL</option>
             <option>Nintendo 3DS / 2DS</option>
+            <option>DSi / DSi XL</option>
             <option>Nintendo DS</option>
             <option>Game Boy / Game Boy Advance</option>
             <option>Nintendo Switch</option>
-            <option>Other</option>
+            <option>Other (specify the console in the description)</option>
           </select>
         </div>
 
@@ -138,32 +143,17 @@
 
     <div class="faq-item">
       <div class="faq-q" onclick="toggleFaq(this)">How do I send my console?</div>
-      <div class="faq-a">Once the quote is approved, you send your console by tracked post to the address I give you. Pack it carefully with bubble wrap. I let you know as soon as it arrives and keep you updated throughout the work.</div>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">How long does a capture card install take?</div>
-      <div class="faq-a">Usually between 48h and 5 working days depending on the model and the workload. The exact lead time is given with the quote.</div>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">Does the capture card install void the warranty?</div>
-      <div class="faq-a">Yes, opening the console voids the manufacturer's warranty. That's inherent to this kind of hardware mod. However, I guarantee my work: if an issue is linked to my intervention, I take care of it.</div>
+      <div class="faq-a">You can ship it as follows:<br>• By post directly to my address shown on the quote.<br>• or via Mondial Relay (LIDL Locker or Games Factory Locker in Beaune)<br>• or via Chronopost (Chez Coco in Bligny-les-Beaune)<br><br>Please pack it well with a sturdy box, bubble wrap and quality tape. Feel free to photograph your parcel before sending, and include my email and phone for tracking.</div>
     </div>
 
     <div class="faq-item">
       <div class="faq-q" onclick="toggleFaq(this)">Which software works with the capture card?</div>
-      <div class="faq-a">The installed capture card works with OBS Studio (free), Elgato 4K Capture Utility, AverMedia RECentral and most capture software on PC and Mac. I provide a getting-started guide with every install.</div>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">Do you repair very old consoles?</div>
-      <div class="faq-a">Depending on the fault, yes! Contact me with a description of the problem. I'll tell you honestly whether it's within my reach and whether the repair is worth it.</div>
+      <div class="faq-a">The software to use is 3DS Capture or cc3dsfs, preferred when using several consoles. Download them here: <a href="../assets/downloads/3ds_capture.zip" download style="color:var(--purple-glow);text-decoration:underline;">3DS Capture</a> and <a href="../assets/downloads/cc3dsfs.zip" download style="color:var(--purple-glow);text-decoration:underline;">cc3dsfs</a>.</div>
     </div>
 
     <div class="faq-item">
       <div class="faq-q" onclick="toggleFaq(this)">How does payment work?</div>
-      <div class="faq-a">Payment is made after the work, when your console is returned. I don't require a deposit for small repairs. For bigger projects a 30% deposit may be requested. Payment by bank transfer or PayPal.</div>
+      <div class="faq-a">Payment is always made by bank transfer before work begins, as stated on the quotes. If your project ends up costing less, I refund the difference or deduct it from your next order. The bank details are at the bottom of every quote.</div>
     </div>
 
   </div>

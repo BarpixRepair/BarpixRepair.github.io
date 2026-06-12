@@ -53,12 +53,15 @@
       <p>Damit ich so schnell wie möglich antworten kann, geben Sie bitte in Ihrer Nachricht an:</p>
       <ul style="color:var(--text-dim); font-size:0.9rem; line-height:2; padding-left:20px; margin-bottom:24px;">
         <li>Das genaue Modell Ihrer Konsole</li>
-        <li>Die gewünschte Leistung (Capture Card, Reparatur, Custom…)</li>
+        <li>Die gewünschte Leistung (Reparatur, Modding, Capture Card)</li>
         <li>Eine Beschreibung des Defekts, falls zutreffend</li>
-        <li>Ihre Region / Ihren Standort</li>
+        <li>Ihr Departement (FR) / Land</li>
       </ul>
 
       <h3>Mich direkt kontaktieren</h3>
+      <a href="mailto:barpixrepair@gmail.com" class="contact-link">
+        <span>✉️</span> barpixrepair@gmail.com
+      </a>
       <a href="https://discord.gg/faUDPVxeK5" target="_blank" class="contact-link">
         <span>💬</span> Barpix Repair Discord-Server
       </a>
@@ -66,7 +69,7 @@
       <div class="service-card" style="margin-top:24px; padding:20px 24px;">
         <p style="font-size:0.85rem; color:var(--text-dim); line-height:1.8;">
           <strong style="color:var(--purple-glow);">⏱ Antwortzeit:</strong> binnen 24 Std. werktags.<br>
-          <strong style="color:var(--purple-glow);">📦 Postversand:</strong> ganz Frankreich.<br>
+          <strong style="color:var(--purple-glow);">📦 Lieferung:</strong> Frankreich und Europa.<br>
           <strong style="color:var(--purple-glow);">💰 Angebot:</strong> kostenlos und unverbindlich.
         </p>
       </div>
@@ -77,11 +80,11 @@
         <div class="form-row">
           <div class="form-group">
             <label for="prenom">Vorname</label>
-            <input type="text" id="prenom" name="prenom" placeholder="Nicolas" required>
+            <input type="text" id="prenom" name="prenom" placeholder="" required>
           </div>
           <div class="form-group">
             <label for="email">E-Mail-Adresse</label>
-            <input type="email" id="email" name="email" placeholder="sie@beispiel.de" required>
+            <input type="email" id="email" name="email" placeholder="" required>
           </div>
         </div>
 
@@ -89,10 +92,10 @@
           <label for="service">Gewünschte Leistung</label>
           <select id="service" name="service" required>
             <option value="" disabled selected>Leistung wählen…</option>
-            <option value="Capture-Card-Einbau">Capture-Card-Einbau</option>
             <option value="Reparatur">Reparatur</option>
-            <option value="Individualisierung">Individualisierung</option>
-            <option value="Anderes / Noch unsicher">Anderes / Noch unsicher</option>
+            <option value="Modding">Modding</option>
+            <option value="Capture Card">Capture Card</option>
+            <option value="Anderes">Anderes</option>
           </select>
         </div>
 
@@ -100,12 +103,14 @@
           <label for="console">Konsolenmodell</label>
           <select id="console" name="console">
             <option value="" disabled selected>Modell wählen…</option>
+            <option>New 2DS XL</option>
             <option>New 3DS XL</option>
             <option>Nintendo 3DS / 2DS</option>
+            <option>DSi / DSi XL</option>
             <option>Nintendo DS</option>
             <option>Game Boy / Game Boy Advance</option>
             <option>Nintendo Switch</option>
-            <option>Anderes</option>
+            <option>Anderes (Konsole in der Beschreibung angeben)</option>
           </select>
         </div>
 
@@ -138,32 +143,17 @@
 
     <div class="faq-item">
       <div class="faq-q" onclick="toggleFaq(this)">Wie sende ich meine Konsole ein?</div>
-      <div class="faq-a">Nach Freigabe des Angebots senden Sie Ihre Konsole per verfolgtem Versand an die Adresse, die ich Ihnen nenne. Verpacken Sie sie sorgfältig mit Luftpolsterfolie. Ich melde mich bei Erhalt und halte Sie während der gesamten Arbeit auf dem Laufenden.</div>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">Wie lange dauert ein Capture-Card-Einbau?</div>
-      <div class="faq-a">In der Regel zwischen 48 Std. und 5 Werktagen, je nach Modell und Auftragslage. Die genaue Dauer wird mit dem Angebot mitgeteilt.</div>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">Erlischt durch den Capture-Card-Einbau die Garantie?</div>
-      <div class="faq-a">Ja, jedes Öffnen der Konsole führt zum Verlust der Herstellergarantie. Das gehört zu dieser Art Hardware-Mod. Dafür garantiere ich meine Arbeit: Liegt ein Problem an meinem Eingriff, kümmere ich mich darum.</div>
+      <div class="faq-a">Den Versand können Sie so durchführen:<br>• Per Post direkt an meine auf dem Angebot angegebene Adresse.<br>• oder per Mondial Relay (LIDL-Locker oder Games-Factory-Locker in Beaune)<br>• oder per Chronopost (Chez Coco in Bligny-les-Beaune)<br><br>Bitte gut verpacken mit stabilem Karton, Luftpolsterfolie und hochwertigem Klebeband. Machen Sie gern ein Foto Ihres Pakets vor dem Versand und legen Sie meine E-Mail und Telefonnummer für die Sendungsverfolgung bei.</div>
     </div>
 
     <div class="faq-item">
       <div class="faq-q" onclick="toggleFaq(this)">Welche Software passt zur Capture Card?</div>
-      <div class="faq-a">Die verbaute Capture Card ist kompatibel mit OBS Studio (kostenlos), Elgato 4K Capture Utility, AverMedia RECentral und den meisten Capture-Programmen auf PC und Mac. Zu jedem Einbau liefere ich eine Einstiegsanleitung.</div>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">Reparieren Sie sehr alte Konsolen?</div>
-      <div class="faq-a">Je nach Defekt, ja! Kontaktieren Sie mich mit einer Beschreibung des Problems. Ich sage Ihnen ehrlich, ob es machbar ist und ob sich die Reparatur lohnt.</div>
+      <div class="faq-a">Die zu verwendende Software ist 3DS Capture oder cc3dsfs, bevorzugt bei mehreren Konsolen. Hier herunterladen: <a href="../assets/downloads/3ds_capture.zip" download style="color:var(--purple-glow);text-decoration:underline;">3DS Capture</a> und <a href="../assets/downloads/cc3dsfs.zip" download style="color:var(--purple-glow);text-decoration:underline;">cc3dsfs</a>.</div>
     </div>
 
     <div class="faq-item">
       <div class="faq-q" onclick="toggleFaq(this)">Wie läuft die Bezahlung?</div>
-      <div class="faq-a">Die Zahlung erfolgt nach der Arbeit, bei Rückgabe Ihrer Konsole. Für kleine Reparaturen verlange ich keine Anzahlung. Für größere Projekte kann eine Anzahlung von 30 % anfallen. Zahlung per Überweisung oder PayPal.</div>
+      <div class="faq-a">Die Zahlung erfolgt immer per Überweisung vor Arbeitsbeginn, wie in den Angeboten angegeben. Falls Ihr Projekt günstiger ausfällt, erstatte ich die Differenz oder ziehe sie von der nächsten Bestellung ab. Die Bankverbindung steht unten auf jedem Angebot.</div>
     </div>
 
   </div>

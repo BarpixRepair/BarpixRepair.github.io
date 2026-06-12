@@ -53,12 +53,15 @@
       <p>Pour que je puisse vous répondre au plus vite, précisez dans votre message :</p>
       <ul style="color:var(--text-dim); font-size:0.9rem; line-height:2; padding-left:20px; margin-bottom:24px;">
         <li>Le modèle exact de votre console</li>
-        <li>Le service souhaité (capture card, réparation, custom…)</li>
+        <li>Le service souhaité (réparation, modding, capture card)</li>
         <li>Une description de la panne si applicable</li>
-        <li>Votre département / localisation</li>
+        <li>Votre département (FR) / pays</li>
       </ul>
 
       <h3>Me contacter directement</h3>
+      <a href="mailto:barpixrepair@gmail.com" class="contact-link">
+        <span>✉️</span> barpixrepair@gmail.com
+      </a>
       <a href="https://discord.gg/faUDPVxeK5" target="_blank" class="contact-link">
         <span>💬</span> Serveur Discord Barpix Repair
       </a>
@@ -66,7 +69,7 @@
       <div class="service-card" style="margin-top:24px; padding:20px 24px;">
         <p style="font-size:0.85rem; color:var(--text-dim); line-height:1.8;">
           <strong style="color:var(--purple-glow);">⏱ Délai de réponse :</strong> sous 24h en semaine.<br>
-          <strong style="color:var(--purple-glow);">📦 Envoi postal :</strong> France entière.<br>
+          <strong style="color:var(--purple-glow);">📦 Livraison :</strong> France et Europe.<br>
           <strong style="color:var(--purple-glow);">💰 Devis :</strong> gratuit et sans engagement.
         </p>
       </div>
@@ -77,11 +80,11 @@
         <div class="form-row">
           <div class="form-group">
             <label for="prenom">Prénom</label>
-            <input type="text" id="prenom" name="prenom" placeholder="Nicolas" required>
+            <input type="text" id="prenom" name="prenom" placeholder="" required>
           </div>
           <div class="form-group">
             <label for="email">Adresse e-mail</label>
-            <input type="email" id="email" name="email" placeholder="vous@exemple.fr" required>
+            <input type="email" id="email" name="email" placeholder="" required>
           </div>
         </div>
 
@@ -89,10 +92,10 @@
           <label for="service">Service souhaité</label>
           <select id="service" name="service" required>
             <option value="" disabled selected>Choisissez un service…</option>
-            <option value="Installation Capture Card">Installation Capture Card</option>
             <option value="Réparation">Réparation</option>
-            <option value="Customisation">Customisation</option>
-            <option value="Autre / Je ne sais pas encore">Autre / Je ne sais pas encore</option>
+            <option value="Modding">Modding</option>
+            <option value="Capture Card">Capture Card</option>
+            <option value="Autres">Autres</option>
           </select>
         </div>
 
@@ -100,12 +103,14 @@
           <label for="console">Modèle de console</label>
           <select id="console" name="console">
             <option value="" disabled selected>Choisissez un modèle…</option>
+            <option>New 2DS XL</option>
             <option>New 3DS XL</option>
             <option>Nintendo 3DS / 2DS</option>
+            <option>DSi / DSi XL</option>
             <option>Nintendo DS</option>
             <option>Game Boy / Game Boy Advance</option>
             <option>Nintendo Switch</option>
-            <option>Autre</option>
+            <option>Autre (précisez la console en description)</option>
           </select>
         </div>
 
@@ -138,32 +143,17 @@
 
     <div class="faq-item">
       <div class="faq-q" onclick="toggleFaq(this)">Comment envoyer ma console ?</div>
-      <div class="faq-a">Après validation du devis, vous envoyez votre console par colissimo ou chronopost à l'adresse que je vous communique. Emballez-la soigneusement avec du papier bulle. Je vous préviens dès réception et vous tiens informé tout au long de l'intervention.</div>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">Combien de temps dure une installation capture card ?</div>
-      <div class="faq-a">En général entre 48h et 5 jours ouvrés selon le modèle et le carnet de commandes. Le délai exact vous est communiqué lors du devis.</div>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">L'installation capture card annule-t-elle la garantie ?</div>
-      <div class="faq-a">Oui, toute ouverture de la console entraîne la perte de la garantie constructeur. C'est inhérent à ce type de modification matérielle. En revanche, je garantis mon travail : si un problème est lié à mon intervention, je le prends en charge.</div>
+      <div class="faq-a">Concernant l'envoi vous pouvez le réaliser :<br>• Par la poste directement à mon adresse indiquée sur le devis.<br>• ou par Mondial Relay (Locker LIDL ou Locker Games Factory à Beaune)<br>• ou par Chronopost (Chez Coco à Bligny-les-Beaune)<br><br>Pensez à bien emballer avec un carton solide, du papier bulle et du scotch de qualité. N'hésitez pas à faire une photo de votre colis avant l'envoi ainsi qu'à bien mettre mon mail et tél pour le suivi.</div>
     </div>
 
     <div class="faq-item">
       <div class="faq-q" onclick="toggleFaq(this)">Quel logiciel utiliser avec la capture card ?</div>
-      <div class="faq-a">La capture card installée est compatible avec OBS Studio (gratuit), Elgato 4K Capture Utility, AverMedia RECentral et la plupart des logiciels de capture sur PC et Mac. Je fournis un guide de démarrage avec chaque installation.</div>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">Réparez-vous les consoles très anciennes ?</div>
-      <div class="faq-a">Selon la panne, oui ! Contactez-moi avec une description du problème. Je vous dirai honnêtement si c'est dans mes cordes et si la réparation vaut économiquement la peine.</div>
+      <div class="faq-a">Les logiciels à utiliser sont 3DS Capture ou cc3dsfs, à privilégier en multi consoles. Téléchargez-les ici : <a href="assets/downloads/3ds_capture.zip" download style="color:var(--purple-glow);text-decoration:underline;">3DS Capture</a> et <a href="assets/downloads/cc3dsfs.zip" download style="color:var(--purple-glow);text-decoration:underline;">cc3dsfs</a>.</div>
     </div>
 
     <div class="faq-item">
       <div class="faq-q" onclick="toggleFaq(this)">Comment se passe le paiement ?</div>
-      <div class="faq-a">Le paiement s'effectue après intervention, au retour de votre console. Je n'exige pas d'acompte pour les petites réparations. Pour les projets plus conséquents, un acompte de 30% peut être demandé. Paiement par virement ou PayPal.</div>
+      <div class="faq-a">Le paiement s'effectue toujours par virement bancaire avant le début des travaux, comme mentionné dans les devis. Si votre projet coûte moins cher, je rembourse ou déduis de la prochaine commande. Les coordonnées bancaires sont au bas de chaque devis.</div>
     </div>
 
   </div>
