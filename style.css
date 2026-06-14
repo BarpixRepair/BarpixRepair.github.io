@@ -754,6 +754,7 @@ footer {
   .form-row { grid-template-columns: 1fr; }
   .page-hero { padding: 40px 20px 30px; }
   footer { padding: 30px 20px; flex-direction: column; text-align: center; }
+  .footer-brand { padding-left: 0 !important; }
   .footer-links { justify-content: center; }
 }
 
