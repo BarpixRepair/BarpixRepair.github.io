@@ -28,14 +28,28 @@
     <img src="../assets/logo.png" alt="Barpix Repair logo">
     <div class="logo-text">BARPIX REPAIR<span>Nintendo Specialist</span></div>
   </a>
-  <nav>
+  <div class="nav-group">
+  <nav class="nav-links">
     <a href="index.html">Start</a>
     <a href="presentation.html">Über mich</a>
     <a href="services.html" class="active">Leistungen</a>
     <a href="ressources.html">Galerie</a>
     <a href="contact.html" class="cta">Kostenloses Angebot</a>
-    <div class="lang-dd" aria-label="Language"><button type="button" class="lang-dd-btn" aria-haspopup="listbox" aria-expanded="false"><span class="lang-dd-code">DE</span><span class="lang-dd-flag">🇩🇪</span><span class="lang-dd-caret" aria-hidden="true"></span></button><ul class="lang-dd-list" role="listbox"><li role="option"><a class="lang-dd-opt" href="../services.html"><span class="lang-dd-code">FR</span><span class="lang-dd-flag">🇫🇷</span></a></li><li role="option"><a class="lang-dd-opt" href="../en/services.html"><span class="lang-dd-code">EN</span><span class="lang-dd-flag">🇬🇧</span></a></li><li role="option"><a class="lang-dd-opt is-current" href="services.html"><span class="lang-dd-code">DE</span><span class="lang-dd-flag">🇩🇪</span></a></li><li role="option"><a class="lang-dd-opt" href="../it/services.html"><span class="lang-dd-code">IT</span><span class="lang-dd-flag">🇮🇹</span></a></li><li role="option"><a class="lang-dd-opt" href="../es/services.html"><span class="lang-dd-code">ES</span><span class="lang-dd-flag">🇪🇸</span></a></li></ul></div>
   </nav>
+  <div class="nav-right">
+    <div class="lang-dd" aria-label="Language"><button type="button" class="lang-dd-btn" aria-haspopup="listbox" aria-expanded="false"><span class="lang-dd-code">DE</span><span class="lang-dd-flag">🇩🇪</span><span class="lang-dd-caret" aria-hidden="true"></span></button><ul class="lang-dd-list" role="listbox"><li role="option"><a class="lang-dd-opt" href="../services.html"><span class="lang-dd-code">FR</span><span class="lang-dd-flag">🇫🇷</span></a></li><li role="option"><a class="lang-dd-opt" href="../en/services.html"><span class="lang-dd-code">EN</span><span class="lang-dd-flag">🇬🇧</span></a></li><li role="option"><a class="lang-dd-opt is-current" href="services.html"><span class="lang-dd-code">DE</span><span class="lang-dd-flag">🇩🇪</span></a></li><li role="option"><a class="lang-dd-opt" href="../it/services.html"><span class="lang-dd-code">IT</span><span class="lang-dd-flag">🇮🇹</span></a></li><li role="option"><a class="lang-dd-opt" href="../es/services.html"><span class="lang-dd-code">ES</span><span class="lang-dd-flag">🇪🇸</span></a></li></ul></div>
+    <button type="button" class="hamburger" aria-label="Menu" aria-expanded="false" onclick="bpToggleMenu(this)">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  </div>
+  <div class="mobile-menu" id="bp-mobile-menu">
+      <a href="index.html">Start</a>
+      <a href="presentation.html">Über mich</a>
+      <a href="services.html" class="active">Leistungen</a>
+      <a href="ressources.html">Galerie</a>
+      <a href="contact.html" class="cta">Kostenloses Angebot</a>
+  </div>
 </header>
 <div class="page-hero">
   <span class="section-label">// Leistungen</span>
@@ -167,6 +181,10 @@
   <div class="footer-copy">© 2026 Barpix Repair · barpixrepair.fr</div>
 </footer>
 
+<div id="bp-lightbox" onclick="this.classList.remove('open')">
+  <img id="bp-lightbox-img" src="" alt="">
+</div>
+
 <script>
 (function() {
   var dd = document.querySelector('.lang-dd');
@@ -181,6 +199,24 @@
   document.addEventListener('click', function(e) { if (!dd.contains(e.target)) close(); });
   document.addEventListener('keydown', function(e) { if (e.key === 'Escape') close(); });
 })();
+function bpToggleMenu(b) {
+  var m = document.getElementById('bp-mobile-menu');
+  if (!m) return;
+  var open = m.classList.toggle('open');
+  b.classList.toggle('open', open);
+  b.setAttribute('aria-expanded', open ? 'true' : 'false');
+}
+function bpLightbox(src) {
+  var lb = document.getElementById('bp-lightbox');
+  document.getElementById('bp-lightbox-img').src = src;
+  lb.classList.add('open');
+}
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    var lb = document.getElementById('bp-lightbox');
+    if (lb) lb.classList.remove('open');
+  }
+});
 </script>
 </body>
 </html>
