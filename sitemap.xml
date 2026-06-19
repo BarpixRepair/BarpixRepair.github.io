@@ -251,4 +251,14 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://www.barpixrepair.fr/es/contact.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.barpixrepair.fr/contact.html"/>
   </url>
+  <url>
+    <loc>https://www.barpixrepair.fr/confidentialite.html</loc>
+    <lastmod>2026-06-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.barpixrepair.fr/confidentialite.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.barpixrepair.fr/en/confidentialite.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.barpixrepair.fr/de/confidentialite.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.barpixrepair.fr/it/confidentialite.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.barpixrepair.fr/es/confidentialite.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.barpixrepair.fr/confidentialite.html"/>
+  </url>
 </urlset>
