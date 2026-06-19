@@ -111,6 +111,11 @@
         </div>
 
         <div class="form-group">
+          <label for="pays">Paese</label>
+          <input type="text" id="pays" name="pays" placeholder="" required>
+        </div>
+
+        <div class="form-group">
           <label for="service">Servizio desiderato</label>
           <select id="service" name="service" required>
             <option value="" disabled selected>Scegli un servizio…</option>
@@ -125,14 +130,23 @@
           <select id="console" name="console">
             <option value="" disabled selected>Scegli un modello…</option>
             <option>New 2DS XL</option>
-            <option>New 3DS XL</option>
+            <option data-cc="1">New 3DS XL</option>
             <option>Nintendo 3DS / 2DS</option>
             <option>DSi / DSi XL</option>
             <option>DS Lite</option>
-            <option>DS</option>
+            <option data-cc="1">DS</option>
             <option>Game Boy / Game Boy Advance</option>
             <option>Nintendo Switch</option>
             <option>Altro (specifica la console nella descrizione)</option>
+          </select>
+        </div>
+
+        <div class="form-group" id="cc-provide-group" style="display:none;">
+          <label for="console-fournie">Devo fornire io la console?</label>
+          <select id="console-fournie" name="console_fournie">
+            <option value="" disabled selected>Scegli…</option>
+            <option>Sì, non ho una console</option>
+            <option>No, installazione sulla mia console</option>
           </select>
         </div>
 
@@ -229,6 +243,52 @@ document.addEventListener('keydown', function(e) {
     if (lb) lb.classList.remove('open');
   }
 });
+</script>
+<script>
+(function () {
+  var service = document.getElementById('service');
+  var consoleSel = document.getElementById('console');
+  var provideGroup = document.getElementById('cc-provide-group');
+  var provideSel = document.getElementById('console-fournie');
+  var form = document.getElementById('contact-form');
+  if (!service || !consoleSel) return;
+
+  var fullOptions = consoleSel.innerHTML;
+
+  function buildCcOptions() {
+    var tmp = document.createElement('select');
+    tmp.innerHTML = fullOptions;
+    var keep = [];
+    Array.prototype.forEach.call(tmp.options, function (o) {
+      if (o.value === '' || o.getAttribute('data-cc') === '1') keep.push(o.outerHTML);
+    });
+    return keep.join('');
+  }
+  var ccOptions = buildCcOptions();
+
+  function update() {
+    var isCC = service.value === 'Capture Card';
+    if (isCC) {
+      if (consoleSel.getAttribute('data-mode') !== 'cc') {
+        consoleSel.innerHTML = ccOptions;
+        consoleSel.setAttribute('data-mode', 'cc');
+      }
+      if (provideGroup) provideGroup.style.display = '';
+      if (provideSel) provideSel.required = true;
+    } else {
+      if (consoleSel.getAttribute('data-mode') === 'cc') {
+        consoleSel.innerHTML = fullOptions;
+        consoleSel.setAttribute('data-mode', 'full');
+      }
+      if (provideGroup) provideGroup.style.display = 'none';
+      if (provideSel) { provideSel.required = false; provideSel.value = ''; }
+    }
+  }
+
+  service.addEventListener('change', update);
+  if (form) form.addEventListener('reset', function () { setTimeout(update, 0); });
+  update();
+})();
 </script>
 </body>
 </html>
